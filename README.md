@@ -35,20 +35,60 @@ Connect the supply (+5V) to the circuit
 Switch ON the main switch
 If the output is 1, then the led glows.
 ### 
-Program:
-/*
-Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
-Logic symbol & Truthtable
-RTL realization
+## HALF ADDER
+## Program:
+module project_3(sum,carry,a,b);
 
-### Output:
-### RTL
-### TIMING DIAGRAM
+input a,b; 
 
+output sum,carry; 
 
-### TRUTH TABLE 
+xor sum1(sum,a,b); 
 
+and carry1(carry,a,b); 
+
+endmodule
+## Developed by: Shivaram.M
+## RegisterNumber: 212223040195
+## Logic symbol & Truthtable:
+
+![image](https://github.com/Shivaram2525/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/144226303/34265563-37b3-4de9-8362-f5a566327751)
+
+## RTL realization:
+
+![image](https://github.com/Shivaram2525/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/144226303/7f729b0d-6547-427a-9c53-f0bb9880aac3)
+
+## Timing diagram:
+
+![image](https://github.com/Shivaram2525/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/144226303/a5026e58-d9a3-4380-a7a9-b5b061567cb3)
+
+## FULL ADDER
+## Program:
+
+module project_3_2(a,b,c,sum,carry);
+
+input a,b,c;
+
+output sum,carry;
+
+xor(sum,a,b,c);
+
+assign carry=a&b | b&c | a&c;
+
+endmodule
+
+## Logic Symbol & Truth Table:
+
+![image](https://github.com/Shivaram2525/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/144226303/b2767a88-c917-47a0-8218-e9a4eb1df0b1)
+
+## RTL Realization:
+
+![image](https://github.com/Shivaram2525/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/144226303/6293bbd8-44c8-4bb9-95bb-51b015b3e274)
+
+## Timing diagram:
+
+![image](https://github.com/Shivaram2525/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/144226303/52a3cefa-9953-40e7-80bf-3a6f283b30be)
+
+### Output
 ### Result:
+Thus the given logic functions are implemented and their operations are verified using verilog programming
